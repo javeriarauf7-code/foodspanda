@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodPanda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!--Navbar Start-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <img src="assets/unnamed.webp" width="30" class="me-2">
+      <span class="d-none d-sm-inline">FoodPanda</span>
+    </a>
+    <div class="d-flex align-items-center ms-lg-3 me-auto">
+      <i class="fa-solid fa-location-dot text-danger me-2"></i>
+      <span style="font-size: 14px;">Islamabad Service Road</span>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#foodpandaNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="foodpandaNav">
+      <div class="w-100 mt-3 mt-lg-0">
+        <div class="d-lg-flex justify-content-between align-items-center">
+          <div class="flex-grow-1 mx-lg-4 my-2 my-lg-0">
+            <div class="input-group search-box">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+              </span>
+              <input type="search" class="form-control border-start-0" placeholder="Search restaurants...">
+            </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-end">
+            <button class="btn btn-outline-dark px-4 rounded-3">Log in</button>
+            <button class="btn btn-danger px-3 rounded-3">Sign up</button>
+          </div>
+        </div>
+        <ul class="navbar-nav d-flex flex-row flex-wrap gap-3 mt-3 border-top pt-2">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold text-danger" href="#"><i class="fa-solid fa-motorcycle"></i> Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-bicycle"></i> Pick-up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping"></i> Pandamart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-store"></i> Shops</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+<div class="container-fluid p-0">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active">
+        <img src="assets/GN-26-D.png" class="d-block w-100 carousel-img" alt="">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/KV-26-D.png" class="d-block w-100 carousel-img" alt="">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/chtye.jpg" class="d-block w-100 carousel-img" alt="">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</div>
+
+
+<!--Navbar End-->
+<!--Left Side start-->
+    <!-- <div class="container-fluid">
+      <div class="row ">
+          <div class="col-lg-12 ms-5 bg-light custom-sidebar panda">
+          <h4>Filters</h4>
+          <h6 class="mt-4">Sort by</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sort" />
+            <label class="form-check-label">Relevance</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sort" />
+            <label class="form-check-label">Fastest delivery</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sort" />
+            <label class="form-check-label">Distance</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sort" />
+            <label class="form-check-label">Top rated</label>
+          </div>
+
+          <h6 class="mt-4">Quick filters</h6>
+
+          <button class="btn btn-outline-secondary rounded-pill mb-2">
+            Ratings 4+
+          </button>
+          <div>
+            <button class="btn btn-outline-secondary rounded-pill mb-2">
+              <i class="fa-regular fa-star"></i>
+              Super restaurant
+            </button>
+          </div>
+
+          <h6 class="mt-4">Offers</h6>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Free delivery</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Accepts vouchers</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Deals</label>
+          </div>
+          <h6 class="mt-4">Cuisines</h6>
+          <button class="btn btn-outline-secondary rounded-pill mb-2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search for Cuisines
+          </button>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">American</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Biryan</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">BBQ</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Cakes & Bakery</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Broast</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Chines</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Bevergers</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Coffe</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Green Tea</label>
+          </div>
+          <h6 class="mt-4">Price</h6>
+          <button class="btn btn-outline-secondary rounded-pill mb-2">$</button>
+          <button class="btn btn-outline-secondary rounded-pill mb-2">
+            $$
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill mb-2">
+            $$$
+          </button>
+        </div> -->
+<!--Left Side End-->
+    <!--Right Content Start-->
+        <!-- <div class="col-3 col-md-12 col-lg-9 p-4 ">
+          <div class=" carbg card text-white custom-card">
+            <div
+              class="card-body d-flex justify-content-between align-items-center" style="height: 200px;">
+            <div style="max-width: 700px;">
+        <h2 class="food-title">
+          Sign up for free delivery <br> on your first order
+        </h2>
+        <a href="#" class="btn-signup">
+           Sign up
+        </a>
+      </div> 
+      <div class="image-content">
+     <img src="assets/panda.png"  alt="Panda" class="mascot-img" />
+     </div> -->
+      <!-- </div>
+        </div> -->
+        <!--Right side content End-->
+        <!--Slider Start-->
+       
+         <div class="container">
+          <h2 >Cuisines</h2>
+        <div class="row">
+    <div id="multiItemCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                    <div class="col"><div class="zoom">
+                      <img src="assets/CH1.jpg" alt="" class="img ">
+                      <p class="par1">Fast Food</p>
+                    </div></div>
+                    <div class="col"><div class="zoom">
+                      <img src="assets/CH2.jpg" alt="" class="img ">
+                      <p class="par1">Pizza</p>
+                    </div></div>
+                   <div class="col"><div class="zoom">
+                      <img src="assets/chtye.jpg" alt="" class="img ">
+                      <p class="par1">Baryani</p>
+                    </div></div>
+                   <div class="col"><div class="zoom">
+                      <img src="assets/istockphot6.jpg" alt="" class="img ">
+                      <p class="par1">pakistani</p>
+                    </div></div>
+                    <div class="col"><div class="zoom">
+                      <img src="assets/istockphoto5.jpg" alt="" class="img ">
+                      <p class="par1">Burgers</p>
+                    </div></div>
+                    
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                    <div class="col"><div class="zoom">
+                      <img src="assets/istockphoto4.jpg" alt="" class="img ">
+                      <p class="par1">Hawala Puri</p>
+                    </div></div>
+                    <div class="col"><div class="zoom">
+                      <img src="assets/istockphoto7.jpg" alt="" class="img ">
+                      <p class="par1">Ice cream</p>
+                    </div></div>
+                    <div class="col"><div class="zoom">
+                      <img src="assets/istockphoto8.jpg" alt="" class="img ">
+                      <p class="par1">Chiness</p>
+                    </div></div>
+                    <div class="col"><div class="zoom">
+                      <img src="assets/sweet.jpg" alt="" class="img ">
+                      <p class="par1">BBQ</p>
+                    </div></div>
+                   <div class="col"><div class="zoom">
+                      <img src="assets/istockphoto7.jpg" alt="" class="img ">
+                      <p class="par1">Fast Food</p>
+                    </div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+</div>
+<!--Slider End-->
+      
+<!--Dailing row start -->
+        
+         <div class="container">
+             <h2 class="mt-4">Your Daily Deal</h2>
+          <div class="row  mt-2 g-3">
+            <div class="col-4">
+              <img
+                src="assets/desktop_landing_EnCHWn.webp"
+                alt=""
+                class="img-fluid rounded " style="height: 100px;"
+              />
+            </div>
+            <div class="col-4">
+              <img
+                src="assets/desktop_landing_EnSSYO.webp"
+                alt=""
+                class="img-fluid rounded" style="height: 100px;"
+              />
+            </div>
+          </div>
+<!--Dealing row end-->
+<!--Card Start-->
+<h2 class="mt-4">Same Tast Same Price</h2>
+  <div class="container">
+  <div class="row mt-2 g-3">
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/CH1.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/rice.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/roti.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/samsons.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+ </div> 
+  <div class="container col-lg-12">
+  <div class="row mt-2 g-3">
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/chtye.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/desktop_landing_EnCHWn.webp" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/potos.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/istockphoto5.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div> 
+<!--Card End-->
+<!-- Top shop Start-->
+   <h2 class="mt-4">Top Shops</h2>
+ <div class="container-fluid my-5">
+  <div class="row">
+  <div class="col">
+  <div class="zoom1">
+    <img src="assets/downloadarr.png" alt="Time out">
+    <div class="text-box">
+      <p class="title">Time Out (Jinnah Avenue)</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+ <div class="col">
+  <div class="zoom1">
+    <img src="assets/downloadve.jpg" alt="Time out">
+    <div class="text-box">
+      <p class="title">Punjab Fresh Fruits &.......</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="zoom1">
+    <img src="assets/downloadse.jpg" alt="Time out">
+    <div class="text-box">
+      <p class="title">Shell (PK)</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--Top Shop Start-->
+ <!--Top Start-->
+ <h2 class="mt-4">Top Brands</h2>
+ <div class="container-fluid my-5">
+  <div class="row">
+  <div class="col">
+  <div class="zoom1">
+    <img src="assets/downloaddomi.jpg" alt="Time out">
+    <div class="text-box">
+      <p class="title">Domino's Pizza</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+ <div class="col">
+  <div class="zoom1">
+    <img src="assets/downloadKF.png" alt="Time out">
+    <div class="text-box">
+      <p class="title">Burgers Fries &.......</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="zoom1">
+    <img src="assets/downloadP.png" alt="Time out">
+    <div class="text-box">
+      <p class="title">Pizza Hut's</p>
+      <p class="time">20 min</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  <!--Top Brand End-->
+<h2 class="mt-4">Home Chef</h2>
+  <div class="container">
+  <div class="row mt-2 g-3">
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/sweet.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/istockphoto7.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/istockphoto4.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/istockphoto3.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+  </div>
+ </div> 
+
+<div class=" container-fluid col-md-12 col-lg-9 p-4" >
+  <div class="carbg card text-dark custom-card border-0" style="background-color: #FDE9EC; border-radius: 20px;">
+    <div class="card-body d-flex justify-content-between align-items-center p-5" style="min-height: 250px;">
+      
+      <div style="max-width: 500px;">
+        <h2 class="food-title fw-bold mb-3" style="font-size: 2.2rem; color: #333;">
+          Unlock exclusive deals and more in our <span style="color: #D70F64;">mobile app</span>
+        </h2>
+        <p class="mb-4" style="color: #333; font-size: 1.1rem;">
+          Meal for one, fast checkout, food & grocery deals: get it all on foodpanda
+        </p>
+        
+        <div class="d-flex gap-3">
+          <a href="#" class="btn btn-outline-dark d-flex align-items-center gap-2 px-3 py-2 bg-white" style="border-radius: 10px; border-width: 2px;">
+             <i class="bi bi-apple fs-4"></i>
+             <div class="text-start">
+               <small class="d-block" style="font-size: 0.7rem;">Download on the</small>
+               <span class="fw-bold">App Store</span>
+             </div>
+          </a>
+          <a href="#" class="btn btn-outline-dark d-flex align-items-center gap-2 px-3 py-2 bg-white" style="border-radius: 10px; border-width: 2px;">
+             <i class="bi bi-google-play fs-4"></i>
+             <div class="text-start">
+               <small class="d-block" style="font-size: 0.7rem;">GET IT ON</small>
+               <span class="fw-bold">Google Play</span>
+             </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="image-content d-none d-lg-block">
+        <img src="assets/panda.png" alt="Panda" class="mascot-img" style="width: 220px; transform: translateY(20px);" />
+      </div>
+
+    </div>
+  </div>
+</div>
+ <h2 class="mt-4">Your Daily Deal</h2>
+  <div class="container">
+  <div class="row mt-2 g-3">
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/CH1.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/rice.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/roti.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card food-card">
+        <img src="assets/samsons.jpg" class="card-img-top" alt="Food">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="card-title">Suadish Biryani - BL...</h6>
+            <span class="rating">
+              <i class="fa fa-star"></i> 4.4
+            </span>
+          </div>
+          <p class="orders">+10 orders</p>
+          <p class="time">10–35 min • $ • Pakistan</p>
+          <div class="delivery d-flex justify-content-between">
+            <span><i class="fa fa-truck"></i> Rs.75</span>
+            <button class="offer-btn">15% OFF</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+ </div> 
+
+
+
+ <section class="content-section">
+        <div class="container">
+            <h1 style="font-size: 2.4rem;
+  font-weight: 700; margin-top: 10px;">Food delivery in Islamabad has never been easier</h1>
+            <p>
+                Pakistan's capital and a pulsating, energetic and cosmopolitan city, Islamabad enjoys a 
+                multicultural and diverse food scene. Thanks to its rapid urbanisation, you can find 
+                numerous international chains as well as incredibly popular local and traditional 
+                establishments, offering nearly unlimited cuisine options when it comes to dining out. 
+                What's even more exciting, food delivery in Islamabad is now made super-easy and convenient. 
+                Reason? foodpanda serves across the length and breadth of this largest city of Pakistan, 
+                enabling easy delivery from restaurants in Islamabad.
+            </p>
+
+<h1 style="font-size: 2.4rem;
+  font-weight: 700;">Islamabad food delivery is just what modern fast-paced lifestyles need</h1>
+
+<p>Aside from health reasons, savouring great food could be a wonderful stress-buster! Especially in a thriving metropolis like Islamabad, you would be leading a very busy lifestyle where food always takes a backseat. Late to the office? No time to prepare food for lunch? Lazy to get up on a Sunday morning? Well, these are just a few of the everyday scenarios where you are most likely going to skip your meals. With food delivery in Islamabad, you never have to forgo your food. With our online portal and mobile app, you can quickly choose from hundreds and hundreds of restaurants, cafes, and takeaways in your city and get satisfying, healthy and delicious food right at your doorstep!
+  </p>
+
+  <h2 style="font-size: 2.4rem;
+  font-weight: 700;">What to order from Islamabad restaurants for delivery</h2>
+  <p>Perhaps, you are a die-hard fan of local delicacies prepared in a traditional way. Angeethi, Andaaz, Al-Nakheel Lebanese Cuisine, and Islamabad Grill are a few of the excellent places you can consider for authentic Pakistani food prepared just like at home. If lucky, you can even snap up our fantastic food deals in Islamabad to save some decent money while indulging to your heart's content. Maybe, you are gathering together with your friends to watch that most awaited cricket match of the year. Why not order some wonderful food, desserts and drinks to spice up the moment? Fish Fingers, Chicken Strips, and Chili Fries from Incantare Cafe & Grill, or Rajasthani Chicken Malai boti with drink and Masala Fish With Naan + Drink from Humpty Dumpty are some of the best-selling options worth a try using our prompt food delivery in Islamabad. From Subway sandwiches to Johnny Rockets burgers, from Sarang Sindhi Cuisine's Chicken Briyani to Big Bites' Chicken Combo, from Fruit Factory's smoothies to Chick Fillet pizzas, our impressive selection of restaurants come handy to suit every taste, mood, and occasion</p>
+        </div>
+    </section>
+<!--Footer Start-->
+<footer class="text-center mt-5 border-top p-3">
+  <a href="#">Laos</a> |
+  <a href="#">Cambodia</a> |
+  <a href="#">Myanmar</a> |
+  <a href="#">Thailand</a>
+</footer>
+<footer class="foodpanda-footer">
+  <div class="footer-container">
+    <ul class="footer-column">
+      <li><a href="#">Press</a></li>
+      <li><a href="#">pandapay Terms and Conditions</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Cashback Terms and Conditions</a></li>
+      <li><a href="#">Partner with Us</a></li>
+      <li><a href="#">pandapro - Monthly Subscription Programme</a></li>
+      <li><a href="#">Areas delivered in Karachi</a></li>
+    </ul>
+
+    <ul class="footer-column">
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Download foodpanda Apps</a></li>
+      <li><a href="#">Suggest a Restaurant</a></li>
+      <li><a href="#">All cuisines</a></li>
+      <li><a href="#">All cities</a></li>
+      <li><a href="#">foodpanda Home Chef</a></li>
+      <li><a href="#">Areas delivered in Lahore</a></li>
+    </ul>
+
+    <ul class="footer-column">
+      <li><a href="#">Refunds with pandapay</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Human rights policy</a></li>
+      <li><a href="#">Corporate Customer</a></li>
+      <li><a href="#">foodpanda Magazine</a></li>
+      <li><a href="#">pandamart Grocery Delivery</a></li>
+      <li><a href="#">Become an Affiliate</a></li>
+      <li><a href="#">Areas delivered in Islamabad</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>© foodpanda</p>
+  </div>
+
+  <!--Footer end-->
+</footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
